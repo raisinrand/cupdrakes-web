@@ -1,0 +1,120 @@
+[
+    // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+    [
+        { "op": "onlyForcedActions", "enabled": true }
+    ],
+
+    // intro dialogue
+    [
+        { "op": "dialogue", "text": "Wohohohoho, it is about time I teach you another family recipe.", "nub": true },
+        { "op": "anyinput" }
+    ],
+
+    // select dragon 7
+    [
+        { "op": "dialogue", "text": "Follow the recipe scroll to bake some Sticky Pudding." },
+        { "op": "spotlight", "target": "unit", "unitId": 7 },
+        { "op": "forceSelect", "unitId": 7, "block": true }
+    ],
+
+    // pickup dragon 7
+    [
+        { "op": "spotlight", "target": "ui", "ui": "Grab" },
+        {
+            "op": "forceAction",
+            "action": {
+                "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+                "dragonId": 7
+            },
+            "block": true
+        }
+    ],
+    [
+        { "op": "spotlightOff" },
+        { "op": "forceActionOff" }
+    ],
+
+
+    // pass dragon 7 to dragon 3
+    [
+        { "op": "spotlight", "target": "tile", "pos": [ 2, 5 ] },
+        {
+            "op": "forceAction",
+            "action": {
+                "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPass",
+                "dragonId": 7,
+                "dir": "Left"
+            },
+            "block": true
+        }
+    ],
+    [
+        {"op":"spotlightOff"},
+        {"op": "forceActionOff"}
+    ],
+
+    // select dragon 3
+    [
+        { "op": "spotlight", "target": "unit", "unitId": 3 },
+        { "op": "forceSelect", "unitId": 3, "block": true }
+    ],
+
+    // pickup dragon 3
+    [
+        { "op": "spotlight", "target": "ui", "ui": "Grab" },
+        {
+            "op": "forceAction",
+            "action": {
+                "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+                "dragonId": 3
+            },
+            "block": true
+        }
+    ],
+    [
+        { "op": "spotlightOff" },
+        { "op": "forceActionOff" }
+    ],
+
+    // intro dialogue to pulling
+    [
+        { "op": "dialogue", "text": "Amazing job! Now, let's yank some enemies.", "nub": true },
+        { "op": "anyinput" }
+    ],
+
+    // Throw pull dessert
+    [
+        { "op": "dialogue", "text": "Pull those enemies into each other!" },
+        { "op": "spotlight", "target": "tile", "pos": [ 2, 1 ] },
+        {
+            "op": "forceAction",
+            "action": {
+                "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonThrowPoint",
+                "dragonId": 3,
+                "point": {"x": 2, "y": 1}
+            },
+            "block": true
+        }
+    ],
+    [
+        { "op": "spotlightOff" },
+        { "op": "forceActionOff" }
+    ],
+    // end dialogue
+    [
+        { "op": "dialogue", "text": "Splendid work! Try pulling other drakelings and ingredient tiles; it's a useful positioning tactic!", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "spotlightOff" },
+        { "op": "forceModeOff" },
+        { "op": "dialogueOff" },
+        { "op": "forceSelectOff" },
+        { "op": "forceActionOff" }
+    ],
+    [
+        { "op": "onlyForcedActions", "enabled": false }
+    ]
+
+    // end turn
+]

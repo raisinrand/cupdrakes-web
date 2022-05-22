@@ -1,0 +1,16 @@
+[
+    // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+    [
+        { "op": "onlyForcedActions", "enabled": false }
+    ],
+
+
+    // intro flavor dialogue
+    [
+        { "op": "dialogue", "text": "Fantastic work! Don't forget that you can pull your teammates and ingredient tiles.", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogueOff" }
+    ]
+]

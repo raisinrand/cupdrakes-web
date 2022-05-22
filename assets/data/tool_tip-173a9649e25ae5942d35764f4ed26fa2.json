@@ -1,0 +1,52 @@
+{
+    "normalTileTitle": "Floor",
+    "normalTileDesc": "No special effect.",
+
+    "wallTileTitle": "Wall",
+    "wallTileDesc": "Blocks movement and projectiles.",
+
+    "halfWallTileTitle": "Half Wall",
+    "halfWallTileDesc": "Blocks walking but not projectiles.",
+    
+    "lavaTileTitle": "Lava Tile",
+    "lavaTileDesc": "Destroys anything that lands on it.",
+    
+    "redIngSrcTileTitle": "Punchkin Patch Tile",
+    "redIngSrcTileDesc": "A source of Punchkins.",
+    
+    "blueIngSrcTileTitle": "Necshroom Tile",
+    "blueIngSrcTileDesc": "A source of Necshrooms.",
+    
+    "greenIngSrcTileTitle": "Snake Nest Tile",
+    "greenIngSrcTileDesc": "A source of Snake Eggs.",
+    
+    "dragonTitle": "Drake Jr.",
+    "dragonDesc": "Can move, harvest ingredients, and launch desserts.",
+    
+    "tankTitle": "Tank",
+    "tankDesc": "Moves 1 tile per turn. Their shield blocks all projectiles except Sticky Pudding.",
+    
+    "assassinTitle": "Assassin",
+    "assassinDesc": "Moves 2 tiles per turn. Vaults over lava and half walls.",
+    
+    "minionTitle": "Minion",
+    "minionDesc": "Moves 1 tile per turn.",
+    
+    "redIngredientTitle": "Punchkin",
+    "redIngredientDesc": "Stuns enemy when thrown. Can craft into a dessert.",
+    
+    "blueIngredientTitle": "Necshroom",
+    "blueIngredientDesc": "Stuns enemy when thrown. Can craft into a dessert.",
+    
+    "greenIngredientTitle": "Snake Egg",
+    "greenIngredientDesc": "Stuns enemy when thrown. Can craft into a dessert.",
+    
+    "killDessertTitle": "Chocolate Lava Cake",
+    "killDessertDesc": "Explodes on a stunned enemy, destroying it and adjacent enemies. Otherwise, stuns.",
+    
+    "pullDessertTitle": "Sticky Pudding",
+    "pullDessertDesc": "Pulls ingredient tiles, enemies, and dragons in front of thrower. Stuns any pulled enemy.",
+    
+    "pushDessertTitle": "Cupsnake",
+    "pushDessertDesc": "Knocks enemy back and stuns them. If 2 enemies collide, both are killed."
+}

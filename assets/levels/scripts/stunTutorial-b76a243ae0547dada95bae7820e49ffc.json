@@ -1,0 +1,75 @@
+[
+  //enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+  [
+    { "op": "onlyForcedActions", "enabled": true }
+  ],
+
+
+  // intro flavor dialogue
+  [
+    { "op": "dialogue", "text": "Oh no, an ambush!", "nub": true },
+    { "op": "anyinput" }
+  ],
+  // select dragon 1
+  [
+    { "op": "dialogue", "text": "You can throw ingredients at enemies to stun them." },
+    { "op": "spotlight", "target": "unit", "unitId": 1 },
+    { "op": "forceSelect", "unitId": 1, "block": true }
+  ],
+  // dragon 1 pickup
+  [
+    { "op": "spotlight", "target": "ui", "ui": "Grab" },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+        "dragonId": 1
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "forceActionOff" }
+  ],
+
+  // throw to stun enemy
+  // enter throw mode
+  [
+    { "op": "spotlight", "target": "ui", "ui": "Throw" },
+    { "op": "forceMode", "mode": "Throw", "block": true }
+  ],
+  [
+    { "op": "spotlightOff" },
+    {"op":  "forceModeOff"}
+  ],
+  [
+    { "op": "spotlight", "target": "tile", "pos": [ 1, 8 ] },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonThrowDirection",
+        "dragonId": 1,
+        "dir": "Up"
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" }
+  ],
+
+  // exit dialogue
+  [
+    { "op": "dialogue", "text": "Hahaha, look at that! Stunned enemies won't be able to move on their next turn.", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "dialogueOff" },
+    { "op": "forceActionOff" },
+    { "op": "forceSelectOff" }
+  ],
+  [
+    { "op": "onlyForcedActions", "enabled": false }
+  ]
+]

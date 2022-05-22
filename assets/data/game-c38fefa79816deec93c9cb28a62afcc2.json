@@ -1,0 +1,7 @@
+{
+    "playerActionsPerTurn": 2,
+    "playerMovesPerTurn": 1,
+    "enemyActionsPerTurn": 1,
+    "enemyMovesPerTurn": 1,
+    "enemyMoveDistance": 2
+}

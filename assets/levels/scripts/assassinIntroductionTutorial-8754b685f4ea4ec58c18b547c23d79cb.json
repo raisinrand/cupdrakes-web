@@ -1,0 +1,38 @@
+[
+    // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+    [
+        { "op": "onlyForcedActions", "enabled": true }
+    ],
+
+
+    // intro flavor dialogue
+    [
+        { "op": "spotlight", "target": "tile", "pos": [ 6, 8 ] },
+        { "op": "dialogue", "text": "Oh no, assassins!", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "spotlight", "target": "tile", "pos": [ 5, 8 ] },
+        { "op": "dialogue", "text": "They can leap over lava... ", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "spotlight", "target": "tile", "pos": [ 2, 1 ] },
+        { "op": "dialogue", "text": "... and half walls.", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "spotlightOff" }
+    ],
+    [
+        { "op": "dialogue", "text": "They're also quick on their feet, so watch out young drakelings!", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogueOff" },
+        { "op": "forceActionOff" }
+    ],
+    [
+        { "op": "onlyForcedActions", "enabled": false }
+    ]
+]

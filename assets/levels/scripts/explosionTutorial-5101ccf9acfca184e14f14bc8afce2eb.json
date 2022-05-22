@@ -1,0 +1,24 @@
+[
+  // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+  [
+    { "op": "onlyForcedActions", "enabled": false }
+  ],
+
+
+  // intro flavor dialogue
+  [
+    { "op": "dialogue", "text": "Oh no! This entire horde of invaders has gotten their hands on our ingredients.", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "dialogue", "text": "They have no culinary sense! They only know how to throw ingredients.", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "dialogue", "text": "Be careful not to get stunned. More importantly, avenge all that wasted food!", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "dialogueOff" }
+  ]
+]

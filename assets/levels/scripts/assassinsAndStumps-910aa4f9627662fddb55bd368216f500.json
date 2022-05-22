@@ -1,0 +1,16 @@
+[
+        // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+        [
+            { "op": "onlyForcedActions", "enabled": false }
+        ],
+
+
+        // intro flavor dialogue
+        [
+            { "op": "dialogue", "text": "Nowadays, you drakelings use transmutation magic to craft, but when I was young we had to use our own fire breath!", "nub": true },
+            { "op": "anyinput" }
+        ],
+        [
+            { "op": "dialogueOff" }
+        ]
+]

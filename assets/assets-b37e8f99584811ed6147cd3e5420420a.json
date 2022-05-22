@@ -1,0 +1,341 @@
+{
+  "jsons": {
+    "game_config": "data/game.json",
+    "visual_config": "data/visual.json",
+    "tool_tip": "data/tool_tip.json",
+    "sprite_anims": "data/sprite_anims.json"
+  },
+	"textures": {
+    "null": "sprites/null.png",
+    "grid": "sprites/9x9grid.png",
+    "items": "sprites/items.png",
+    "dragon": "sprites/dragon.png",
+    "dragon_eyes": "sprites/dragon_eyes.png",
+    "dragon_hat": "sprites/hat.png",
+    "enemy_grunt": "sprites/enemy_grunt.png",
+    "enemy_assassin": "sprites/assassin.png",
+    "enemy_tank": "sprites/enemy_tank.png",
+    "enemy_tank_shieldless": "sprites/enemy_tank_shieldless.png",
+    "blob_shadow": "sprites/blob_shadow.png",
+    "highlight_circle": "sprites/highlight_circle.png",
+    "goop_line": "sprites/effects/goop_line.png",
+    "snake_line": "sprites/effects/snake_line.png",
+    "star": "sprites/star.png",
+    "kill_particle": "sprites/fireball.png",
+    "cursor": "sprites/cursor.png",
+    "tool_tips": "sprites/tool_tips.png",
+    "tool_tips_frame": "sprites/UI/tool_tips_frame.png",
+    "scroll": "sprites/UI/scroll.png",
+    "scroll_closed": "sprites/UI/scroll_closed.png",
+    "scroll_blank": "sprites/UI/scroll_blank.png",
+    "actionCircle": "sprites/UI/actionCircle.png",
+    "actionStone": "sprites/UI/actionStone.png",
+    "dropButton": "sprites/UI/drop.png",
+    "grabButton": "sprites/UI/grab.png",
+    "passButton": "sprites/UI/pass.png",
+    "rockStrip": "sprites/UI/rockStrip.png",
+    "throwButton": "sprites/UI/throw.png",
+    "undoButton": "sprites/UI/undo.png",
+    "tiles:wall": "sprites/tiles/wall.png",
+    "tiles:half_wall": "sprites/tiles/half_wall.png",
+    "tiles:lava": "sprites/lava.png",
+    "tiles:highlight": "sprites/tiles/highlight.png",
+    "tiles:resources": "sprites/tiles/resources_tiles.png",
+    "levelBackground":"backgrounds/levelBackground.png",
+    "game_logo": "backgrounds/startlogo.png",
+    "startScreen": "backgrounds/startScreen.png",
+    "levelSelect": "backgrounds/levelSelect.png",
+    "optionsBackground": "backgrounds/optionsBackground.png",
+    "stoneButton": "sprites/UI/stoneButton.png",
+    "smallStoneButton": "sprites/UI/smallStoneButton.png",
+    "arrowButton": "sprites/UI/arrowButton.png",
+    "speechBubble": "sprites/UI/speech_bubble.png",
+    "speechBubbleArrow": "sprites/UI/speech_bubble_arrow.png",
+    "blackCircle": "sprites/effects/black_circle.png",
+    "winBackground":"backgrounds/winBackground.png",
+    "loseBackground":"backgrounds/loseBackground.png",
+    "pauseBackground":"backgrounds/pauseBackground.png",
+    "gameOverButton":"sprites/UI/gameOverButton.png",
+      "optionsButton":"sprites/UI/optionsButton.png",
+      "slider": "sprites/UI/slider.png",
+    "selectionArrow": "sprites/UI/selectionArrow.png",
+      "transBackground": "sprites/transBackground.png",
+    "highlightLine": {
+        "file": "sprites/effects/highlight_line.png"
+        // "wrapU": "repeated",
+        // "wrapV": "repeated"
+    },
+    "highlightDashed": { 
+        "file": "sprites/effects/highlight_dashed.png"
+        // "wrapU": "repeated",
+        // "wrapV": "repeated"
+    },
+    "highlightArrow": "sprites/effects/highlight_arrow.png",
+    "highlightSquare": "sprites/effects/highlight_square.png",
+    "explosion": "sprites/explosion.png",
+    "previewKill": "sprites/effects/upright_kill.png",
+    "previewCircle": "sprites/effects/circle.png",
+    "noise:melt11": {
+      "file": "sprites/noise/melt11.png",
+      "wrapU": "repeated",
+      "wrapV": "repeated"
+    }
+  },
+  "shaders": {
+    "blit": {
+      "vert": "shaders/fsq.vs",
+      "frag": "shaders/blit.fs"
+    },
+    "wrap": {
+      "vert": "shaders/min.vs",
+      "frag": "shaders/wrap.fs"
+    },
+    "hclip": {
+      "vert": "shaders/min.vs",
+      "frag": "shaders/h_clip.fs"
+    },
+    "creature": {
+      "vert": "shaders/min.vs",
+      "frag": "shaders/creature.fs"
+    },
+    "transition": {
+      "vert": "shaders/fsq.vs",
+      "frag": "shaders/mask_transition.fs"
+    },
+    "shine": {
+      "vert": "shaders/min.vs",
+      "frag": "shaders/shine.fs"
+    },
+    "spotlight": {
+      "vert": "shaders/min.vs",
+      "frag": "shaders/spotlight.fs"
+    },
+    "speech_bubble": {
+      "vert": "shaders/min.vs",
+      "frag": "shaders/speech_bubble.fs"
+    }
+  },
+  "sounds" : {
+      "bgm:cave_bop" : "bgm/cave_bop_1.ogg",
+      "bgm:cave_bop2" : "bgm/cave_bop_2.ogg",
+      "bgm:cave_bop3" : "bgm/cave_bop_3.ogg",
+      "bgm:slow_bop" : "bgm/menu.ogg",
+      "sfx:select" : "sfx/select.mp3",
+      "sfx:craft" : "sfx/craft.wav",
+      "sfx:dragon_death" : "sfx/dragon_death.wav",
+      "sfx:enemy_hurt" : "sfx/enemy_hurt.ogg",
+      "sfx:assassin_death": "sfx/enemy_death.wav",
+      "sfx:grunt_death": "sfx/grunt_death.ogg",
+      "sfx:tank_death": "sfx/tank_death.ogg",
+      "sfx:grandpappy": "sfx/grandpappy.wav",
+      "sfx:end_turn" : "sfx/end_turn.ogg",
+      "sfx:win" : "sfx/win-jingle2.wav",
+      "sfx:lose": "sfx/lose-jingle.wav",
+      "sfx:pickup" : "sfx/pickup.ogg",
+      "sfx:throw_sound" : "sfx/throw_sound.mp3",
+      "sfx:drop": "sfx/drop.ogg",
+      "sfx:tile_click" : "sfx/tile_click.mp3",
+      "sfx:scroll_close" : "sfx/scroll_close.mp3",
+      "sfx:scroll_unfold" : "sfx/scroll_unfold.mp3",
+      "sfx:hover": "sfx/hover-high.ogg",
+      "sfx:click": "sfx/hover-low.ogg",
+      "sfx:dragon_flaps": "sfx/fly.ogg",
+      "sfx:lava": "sfx/lava_hover.mp3",
+      "sfx:dragon_hover": "sfx/dragon_hover.mp3",
+      "sfx:enemy_hover": "sfx/enemy_hover.wav",
+      "sfx:shield": "sfx/shield.ogg",
+      "sfx:speech_open": "sfx/speech-open.wav",
+      "sfx:speech_close": "sfx/speech-close.wav",
+      "sfx:rustle": "sfx/rustle.ogg",
+      "sfx:explosion": "sfx/explosion.wav",
+
+      "sfx:impact": "sfx/impact.ogg",
+
+      "sfx:snake": "sfx/snake.ogg",
+      "sfx:snake_chomp": "sfx/snake_chomp.ogg",
+
+      "sfx:goop_extend_throw": "sfx/throw_sound.mp3",
+      "sfx:goop_extend": "sfx/goop_extend.ogg",
+      "sfx:goop_touch": "sfx/goop_touch.ogg",
+      "sfx:goop_yank": "sfx/goop_yank.ogg",
+      "sfx:goop_yank_launch": "sfx/enemy_hurt.ogg",
+      "sfx:goop_retract": "sfx/goop_retract.ogg",
+
+      "sfx:transition_in": "sfx/transition_in.ogg",
+      "sfx:transition_out": "sfx/transition_out.ogg",
+
+
+      "sfx:footstep1": "sfx/footstep1.ogg",
+      "sfx:footstep2": "sfx/footstep2.ogg",
+      "sfx:footstep_heavy1": "sfx/giant_step1.ogg",
+      "sfx:footstep_heavy2": "sfx/giant_step2.ogg"
+  },
+  "fonts": {
+    "fonts:buggie": {
+      "file": "fonts/Buggie.ttf",
+      "size": 64
+    },
+    "fonts:buggieButton": {
+      "file": "fonts/BuggieButton.ttf",
+      "size": 64
+    },
+    "fonts:buggieTitle": {
+      "file": "fonts/BuggieTitle.ttf",
+      "size": 64
+    },
+    "fonts:buggieNormal": {
+      "file": "fonts/BuggieNormal.ttf",
+      "size": 64
+    },
+    "fonts:buggieHuge": {
+      "file": "fonts/BuggieHuge.ttf",
+      "size": 64
+    },
+    "fonts:buggieWin": {
+      "file": "fonts/BuggieWin.ttf",
+      "size": 64
+    },
+    "fonts:buggieStart": {
+      "file": "fonts/BuggieStart.ttf",
+      "size": 64
+    },
+    "fonts:buggieStartBigger": {
+      "file": "fonts/BuggieStartBigger.ttf",
+      "size": 64
+    },
+    "fonts:buggieStartSmaller": {
+      "file": "fonts/BuggieStartSmaller.ttf",
+      "size": 64
+    },
+    "fonts:buggieOption": {
+      "file": "fonts/BuggieOption.ttf",
+      "size": 64
+    },
+    "fonts:optionTitle": {
+      "file": "fonts/BuggieOptionTitle.ttf",
+      "size": 64
+    }
+  },
+  "levels": {
+    "level1": {
+      "file": "levels/intro.json",
+      // "script": "levels/scripts/intro.json",
+      "bgm": 0
+    },
+    "level2": {
+      "file": "levels/pushTutorial.json",
+      // "script": "levels/scripts/pushTutorial.json",
+      "bgm": 0
+    },
+    "level3": {
+      "file": "levels/passTutorial.json",
+      // "script": "levels/scripts/passTutorial.json",
+      "bgm": 0
+    },
+    "level4": {
+      "file": "levels/pushLavaTutorial.json",
+      // "script": "levels/scripts/pushLavaTutorial.json",
+      "bgm": 0
+    },
+    "level5": {
+      "file": "levels/stunTutorial.json",
+      // "script": "levels/scripts/stunTutorial.json",
+      "bgm": 0
+    },
+    "level6": {
+      "file": "levels/explosionIntroductionTutorial.json",
+      // "script": "levels/scripts/explosionIntroductionTutorial.json",
+      "bgm": 0
+    },
+    "level7": {
+      "file": "levels/explosionTutorial.json",
+      // "script": "levels/scripts/explosionTutorial.json",
+      "bgm": 0
+    },
+    "level8": {
+      "file": "levels/tankTutorial.json",
+      // "script": "levels/scripts/tankTutorial.json",
+      "bgm": 0
+    },
+    "level9": {
+      "file": "levels/pullIntroductionTutorial.json",
+      // "script": "levels/scripts/pullIntroductionTutorial.json",
+      "bgm": 2
+    },
+    "level10": {
+      "file": "levels/pullLavaTutorial.json",
+      // "script": "levels/scripts/pullLavaTutorial.json",
+      "bgm": 2
+    },
+    "level11": {
+      "file": "levels/pullTutorial.json",
+      // "script": "levels/scripts/pullTutorial.json",
+      "bgm": 2
+    },
+    "level12": {
+      "file": "levels/allIngredientsSimple.json",
+      // "script": "levels/scripts/allIngredientsSimple.json",
+      "bgm": 2
+    },
+    "level13": {
+      "file":  "levels/assassinIntro.json",
+      // "script": "levels/scripts/assassinIntroductionTutorial.json",
+      "bgm": 2
+    },
+    "level14": {
+      "file": "levels/assassinFollow1.json",
+      // "script": "levels/scripts/alsoMultitask.json",
+      "bgm": 2
+    },
+    "level15": {
+      "file": "levels/assassinFollow2.json",
+      // "script": "levels/scripts/tanksAndLava.json",
+      "bgm": 2
+    },
+    "level16": {
+      "file": "levels/variousStrategies.json",
+      // "script": "levels/scripts/variousStrategies.json",
+      "bgm": 2
+    },
+    "level17": {
+      "file": "levels/saveTheDrakeling.json",
+      // "script": "levels/scripts/saveTheDrakeling.json",
+      "bgm": 2
+    },
+    "level18": {
+      "file": "levels/gruntsAndTank.json",
+      // "script": "levels/scripts/gruntsAndTank.json",
+      "bgm": 2
+    },
+    "level19": {
+      "file": "levels/assassinsAndStumps.json",
+      // "script": "levels/scripts/assassinsAndStumps.json",
+      "bgm": 2
+    },
+    "level20": {
+      "file": "levels/border.json",
+      // "script": "levels/scripts/border.json",
+      "bgm": 1
+    },
+    "level21": {
+      "file": "levels/multitask.json",
+      // "script": "levels/scripts/multitask.json",
+      "bgm": 1
+    },
+    "level22": {
+      "file": "levels/lotsOfEnemies.json",
+      // "script": "levels/scripts/lotsOfEnemies.json",
+      "bgm": 1
+    },
+    "level23": {
+      "file": "levels/backAndForth.json",
+      // "script": "levels/scripts/backAndForth.json",
+      "bgm": 1
+    },
+    "level24": {
+      "file": "levels/timeCrunch.json",
+      // "script": "levels/scripts/timeCrunch.json",
+      "bgm": 1
+    }
+  }
+}

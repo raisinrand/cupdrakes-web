@@ -1,0 +1,134 @@
+[
+  // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+  [
+    { "op": "onlyForcedActions", "enabled": true }
+  ],
+
+  // intro dialogue
+  [
+    { "op": "dialogue", "text": "Not good! Looks like some of these invaders brought shields!", "nub": true },
+    { "op": "anyinput" }
+  ],
+
+  // select dragon 1
+  [
+    { "op": "dialogue", "text": "This drakeling is in danger! Hurry, select this drakeling." },
+    { "op": "spotlight", "target": "unit", "unitId": 14 },
+    { "op": "forceSelect", "unitId": 14, "block": true }
+  ],
+
+  // pickup dragon 1
+  [
+    { "op": "dialogue", "text": "Try to defend yourself!" },
+    { "op": "spotlight", "target": "ui", "ui": "Grab" },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+        "dragonId": 14
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" }
+  ],
+
+  // prepare to throw dragon 1
+
+  [
+    { "op": "dialogue", "text": "Now let's put that shield to the test, throw your ingredient!" },
+    { "op": "spotlight", "target": "tile", "pos": [ 8, 7 ] },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonThrowDirection",
+        "dragonId": 14,
+        "dir": "Down"
+      },
+      "block": true
+    }
+  ],
+  [
+    {"op":"spotlightOff"},
+    {"op": "forceActionOff"}
+  ],
+
+  // dragon 2
+
+  [
+    { "op": "dialogue", "text": "Hmm, looks like those shields are too sturdy.", "nub": true },
+    { "op": "anyinput" }
+  ],
+
+  // select intro dragon 2
+  [
+    { "op": "dialogue", "text": "Try attacking from another angle!" },
+    { "op": "spotlight", "target": "unit", "unitId": 10 },
+    { "op": "forceSelect", "unitId": 10, "block": true }
+  ],
+  [
+    {"op": "spotlightOff"}
+  ],
+
+
+  // pickup dragon 2
+  [
+    { "op": "spotlight", "target": "ui", "ui": "Grab" },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+        "dragonId": 10
+      },
+      "block": true
+    }
+  ],
+  [
+    {"op":"spotlightOff"},
+    {"op": "forceActionOff"}
+  ],
+  // click on enemy to throw at it
+  [
+    { "op": "spotlight", "target": "tile", "pos": [ 8, 7 ] },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonThrowDirection",
+        "dragonId": 10,
+        "dir": "Up"
+      },
+      "block": true
+    }
+  ],
+  [
+    {"op":"spotlightOff"},
+    {"op": "forceActionOff"},
+    {"op": "forceSelectOff"}
+  ],
+
+
+  // flavor dialogue before leaving player off on their own
+  [
+    { "op": "dialogue", "text": "Great save, young drakeling!", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "dialogue", "text": "Looks like those invaders are still helpless from any other direction.", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "dialogue", "text": "Now, send those invaders back home with tears on their shields!", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "dialogueOff" },
+    { "op": "forceActionOff" }
+  ],
+
+  [
+    { "op": "onlyForcedActions", "enabled": false }
+  ]
+]

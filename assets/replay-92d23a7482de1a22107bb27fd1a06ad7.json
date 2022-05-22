@@ -1,0 +1,43 @@
+[
+{
+	"class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+	"dragonId": 19
+},
+{
+	"class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonMove",
+	"dragonId": 19,
+	"dest": {
+		"x": 4,
+		"y": 8
+	}
+},
+{
+	"class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+	"dragonId": 19
+},
+{
+	"class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonThrowPoint",
+	"dragonId": 19,
+	"point": {
+		"x": 4,
+		"y": 1
+	}
+},
+{
+	"class": "edu.cornell.gdiac.cupdrakes.game.actions.Undo"
+},
+{
+	"class": "edu.cornell.gdiac.cupdrakes.game.actions.Undo"
+},
+{
+	"class": "edu.cornell.gdiac.cupdrakes.game.actions.Undo"
+},
+{
+	"class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonMove",
+	"dragonId": 19,
+	"dest": {
+		"x": 6,
+		"y": 8
+	}
+}
+]

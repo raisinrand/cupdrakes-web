@@ -1,0 +1,20 @@
+[
+        // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+        [
+            { "op": "onlyForcedActions", "enabled": false }
+        ],
+
+
+        // intro flavor dialogue
+        [
+            { "op": "dialogue", "text": "Pesky humans are raising my blood pressure.", "nub": true },
+            { "op": "anyinput" }
+        ],
+        [
+          { "op": "dialogue", "text": "What? No, it has nothing to do with the sweets I've been eating!", "nub": true },
+          { "op": "anyinput" }
+        ],
+        [
+            { "op": "dialogueOff" }
+        ]
+]

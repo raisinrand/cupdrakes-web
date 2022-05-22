@@ -1,0 +1,20 @@
+[
+        // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+        [
+            { "op": "onlyForcedActions", "enabled": false }
+        ],
+
+
+        // intro flavor dialogue
+        [
+            { "op": "dialogue", "text": "You guys want to play hide and seek? First of all, I am at a disadvantage, for I am far larger than you.", "nub": true },
+            { "op": "anyinput" }
+        ],
+        [
+          { "op": "dialogue", "text": "Second of all, despite the disadvantage, I am already winning! WOHOHOHOHOHOHOHOHOHO!", "nub": true },
+          { "op": "anyinput" }
+        ],
+        [
+            { "op": "dialogueOff" }
+        ]
+]

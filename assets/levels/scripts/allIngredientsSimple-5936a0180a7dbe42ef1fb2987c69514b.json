@@ -1,0 +1,16 @@
+[
+    // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+    [
+        { "op": "onlyForcedActions", "enabled": false }
+    ],
+
+
+    // intro flavor dialogue
+    [
+        { "op": "dialogue", "text": "When will you be able to fly above tree stumps and lava, you ask? At the rate you're eating... perhaps another decade or two?", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogueOff" }
+    ]
+]

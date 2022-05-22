@@ -1,0 +1,19 @@
+[
+    // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+    [
+        { "op": "onlyForcedActions", "enabled": false }
+    ],
+
+    // intro flavor dialogue
+    [
+        { "op": "dialogue", "text": "Hmph, in my heyday, I was far stronger than a tank.", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+      { "op": "dialogue", "text": "They can only block in one direction, but I could block in three!", "nub": true },
+      { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogueOff" }
+    ]
+]

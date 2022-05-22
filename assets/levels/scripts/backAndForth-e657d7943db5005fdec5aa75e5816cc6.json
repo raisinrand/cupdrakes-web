@@ -1,0 +1,20 @@
+[
+        // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+        [
+            { "op": "onlyForcedActions", "enabled": false }
+        ],
+
+
+        // intro flavor dialogue
+        [
+            { "op": "dialogue", "text": "Grunts are only good at being annoying.", "nub": true },
+            { "op": "anyinput" }
+        ],
+        [
+          { "op": "dialogue", "text": "Those pesky little things always come in bunches, but that just makes it easier to push and pull them into each other.", "nub": true },
+          { "op": "anyinput" }
+        ],
+        [
+            { "op": "dialogueOff" }
+        ]
+]

@@ -1,0 +1,224 @@
+[
+  // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+  [
+    { "op": "onlyForcedActions", "enabled": true }
+  ],
+
+
+  // intro flavor dialogue
+  [
+    { "op": "dialogue", "text": "Wohohoho, you are learning well! Let us bake a new dessert to stop this horde.", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "dialogue", "text": "First, use a lava cake to stun the enemy.", "nub": true },
+    { "op": "anyinput" }
+  ],
+
+
+  // select dragon 6
+  [
+    { "op": "dialogue", "text": " Select this drakeling." },
+    { "op": "spotlight", "target": "unit", "unitId": 6 },
+    { "op": "forceSelect", "unitId": 6, "block": true }
+  ],
+  [
+    { "op": "spotlightOff" }
+  ],
+
+  // dragon 6 pickup
+  [
+    { "op": "dialogue", "text": "Pick up an ingredient." },
+    { "op": "spotlight", "target": "ui", "ui": "Grab" },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+        "dragonId": 6
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" }
+  ],
+
+
+  // 6 dragon pass to 3 dragon
+  // eneter pass mode
+  [
+    { "op": "dialogue", "text": "Ready for a new treat? Pass this to the other drakeling to bake a lava cake." },
+    { "op": "spotlight", "target": "tile", "pos": [ 2, 3 ] },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPass",
+        "dragonId": 6,
+        "dir": "Left"
+      },
+      "block": true
+    }
+  ],
+
+  // select dragon 3
+  [
+    { "op": "dialogue", "text": "Select this drakeling." },
+    { "op": "spotlight", "target": "unit", "unitId": 3 },
+    { "op": "forceSelect", "unitId": 3, "block": true }
+  ],
+  [
+    { "op": "spotlightOff" }
+  ],
+
+  // dragon 3 pickup
+  [
+    { "op": "dialogue", "text": "Pick up an ingredient." },
+    { "op": "spotlight", "target": "ui", "ui": "Grab" },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+        "dragonId": 3
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" }
+  ],
+
+  // throw to stun enemy
+  // enter throw mode
+  [
+    { "op": "dialogue", "text": "Fine work, you have crafted a lava cake. Let's throw it!" },
+    { "op": "spotlight", "target": "tile", "pos": [ 2, 2 ] },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonThrowDirection",
+        "dragonId": 3,
+        "dir": "Down"
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" }
+  ],
+
+  [
+    { "op": "dialogue", "text": "Look, the lava cake will stun upon contact! What if it hits a stunned enemy?", "nub": true },
+    { "op": "anyinput" }
+  ],
+
+  // select dragon 6
+  [
+    { "op": "dialogue", "text": "Let us have the other drakeling pass a new ingredient. Select this drakeling." },
+    { "op": "spotlight", "target": "unit", "unitId": 6 },
+    { "op": "forceSelect", "unitId": 6, "block": true }
+  ],
+  [
+    { "op": "spotlightOff" }
+  ],
+
+  // dragon 6 pickup
+  [
+    { "op": "dialogue", "text": "Pick up an ingredient." },
+    { "op": "spotlight", "target": "ui", "ui": "Grab" },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+        "dragonId": 6
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" }
+  ],
+
+
+  // 6 dragon pass to 3 dragon
+  // eneter pass mode
+  [
+    { "op": "dialogue", "text": "Pass the ingredient." },
+    { "op": "spotlight", "target": "unit", "unitId": 3 },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPass",
+        "dragonId": 6,
+        "dir": "Left"
+      },
+      "block": true
+    }
+  ],
+
+
+  // select dragon 3
+  [
+    { "op": "dialogue", "text": "Select this drakeling." },
+    { "op": "spotlight", "target": "unit", "unitId": 3 },
+    { "op": "forceSelect", "unitId": 3, "block": true }
+  ],
+  [
+    { "op": "spotlightOff" }
+  ],
+
+
+  // dragon 3 pickup
+  [
+    { "op": "dialogue", "text": "Pickup this ingredient to bake another lava cake." },
+    { "op": "spotlight", "target": "ui", "ui": "Grab" },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+        "dragonId": 3
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" }
+  ],
+
+
+  // throw to kill enemy
+  // enter throw mode
+  [
+    { "op": "dialogue", "text": "Throw your fresh dessert at the enemy and get ready for a surprise!" }
+  ],
+  [
+    { "op": "spotlight", "target": "tile", "pos": [ 2, 2 ] },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonThrowDirection",
+        "dragonId": 3,
+        "dir": "Down"
+      },
+      "block": true
+    }
+  ],
+  // exit dialogue
+  [
+    { "op": "forceSelectOff" },
+    { "op": "dialogue", "text": "Wohoho, upon hitting a stunned enemy, the lava cake will explode! Keep baking, drakelings!", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "dialogueOff" },
+    { "op": "forceActionOff" }
+  ],
+  [
+    { "op": "onlyForcedActions", "enabled": false }
+  ]
+]

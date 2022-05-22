@@ -1,0 +1,22 @@
+[
+  // intro flavor dialogue
+  [
+    { "op": "dialogue", "text": "Hmm. You can't knock those enemies into the woods because of those logs in the way.", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "dialogue", "text": "Luckily, these foolish enemies have not mastered teamwork. Try pushing them into each other.", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "dialogue", "text": "Lava has arisen on our land. Perhaps you can also use this to your advantage.", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "dialogue", "text": "Heh. Back in my day, I could beat them all in one turn. See if you can live up to my name!", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    {"op": "dialogueOff" }
+  ]
+]

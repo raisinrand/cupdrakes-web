@@ -1,0 +1,199 @@
+[
+    // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+    [
+        { "op": "onlyForcedActions", "enabled": true }
+    ],
+
+
+    // intro dialogue
+    [
+        { "op": "dialogue", "text": "My little drakelings, come around. Now that I am old and ill, YOU must protect our home.",
+          "nub": true
+        },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogue", "text": "I will now teach you our ways. As gluttonous dragons of the forest, our food is our best weapon.", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogue", "text": "Let us collect some ingredients to prepare something to do battle with.", "nub": true },
+        { "op": "anyinput" }
+    ],
+
+
+    // select intro
+    [
+        { "op": "dialogue", "text": "Click on this drakeling to select it." },
+        { "op": "spotlight", "target": "unit", "unitId": 1 },
+        { "op": "forceSelect", "unitId": 1, "block": true }
+    ],
+
+
+    // move intro
+    [
+        { "op": "dialogue", "text": "Next, click here to move." },
+        { "op": "spotlight", "target": "tile", "pos": [ 6, 3 ] },
+        {
+            "op": "forceAction",
+            "action": {
+                "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonMove",
+                "dragonId": 1,
+                "dest": {
+                    "x": 6,
+                    "y": 3
+                }
+            },
+            "block": true
+        }
+    ],
+    [
+        { "op": "spotlightOff" },
+        { "op": "forceActionOff" }
+    ],
+
+
+    // pickup intro
+    [
+        { "op": "dialogue", "text": "Now, pick up an ingredient!" },
+        { "op": "spotlight", "target": "ui", "ui": "Grab" },
+        {
+            "op": "forceAction",
+            "action": {
+                "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+                "dragonId": 1
+            },
+            "block": true
+        }
+    ],
+    [
+        { "op": "spotlightOff" },
+        { "op": "forceActionOff" }
+    ],
+
+
+    // end turn
+    [
+        { "op": "dialogue", "text": "Gluttonous drakelings can only move once per turn.", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogue", "text": "If you wish to move again, you will have to end your turn." },
+        { "op": "spotlight", "target": "ui", "ui": "EndTurn" },
+        {
+            "op": "forceAction",
+            "action": { "class": "edu.cornell.gdiac.cupdrakes.game.actions.EndTurn" },
+            "block": true
+        }
+    ],
+    [
+        { "op": "spotlightOff" },
+        { "op": "forceActionOff" }
+    ],
+
+
+    // explain enemies
+    [
+        { "op": "dialogue", "text": "Be careful, as enemies will move on their turn." },
+        { "op": "anyinput" }
+    ],
+
+    // craft intro
+    [
+        { "op": "dialogue", "text": "Quick, move here to get another ingredient." },
+        { "op": "spotlight", "target": "tile", "pos": [ 6, 6 ] },
+        {
+            "op": "forceAction",
+            "action": {
+                "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonMove",
+                "dragonId": 1,
+                "dest": {
+                    "x": 6,
+                    "y": 6
+                }
+            },
+            "block": true
+        }
+    ],
+    [
+        { "op": "spotlightOff" },
+        { "op": "forceActionOff" }
+    ],
+    [
+        { "op": "dialogue", "text": "You must pick up two different items to craft." },
+        { "op": "spotlight", "target": "ui", "ui": "Grab" },
+        {
+            "op": "forceAction",
+            "action": {
+                "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+                "dragonId": 1
+            },
+            "block": true
+        }
+    ],
+    [
+        { "op": "spotlightOff" },
+        { "op": "forceActionOff" }
+    ],
+
+
+    [
+        { "op": "dialogue", "text": "Fantastic work, you have made a Cupsnake!", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogue", "text": "Each combination of ingredients results in a different item.", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogue", "text": "Different items have different abilities!", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogue", "text": "Crafting recipes are shown here, in case you forget.", "nub": true },
+        { "op": "spotlight", "target": "ui", "ui": "Recipes" },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "spotlightOff" }
+    ],
+    [
+        { "op": "dialogue", "text": "Let us make use of that Cupsnake to teach this invader a lesson!", "nub": true },
+        { "op": "anyinput" }
+    ],
+
+
+
+    // throw to kill enemy
+    // enter throw mode
+    [
+        { "op": "dialogue", "text": "Click here to enter throw mode." },
+        { "op": "spotlight", "target": "ui", "ui": "Throw" }, 
+        { "op": "forceMode", "mode": "Throw", "block": true }
+    ],
+    [
+        { "op": "spotlightOff" }
+    ],
+    // click on enemy to throw at it
+    [
+        { "op": "dialogue", "text": "Now, click to throw and knock that invader away!" },
+        { "op": "spotlight", "target": "tile", "pos": [ 3, 6 ] },
+        {
+            "op": "forceAction",
+            "action": {
+                "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonThrowDirection",
+                "dragonId": 1,
+                "dir": "Left"
+            },
+            "block": true
+        }
+    ],
+    [
+        { "op": "spotlightOff" },
+        { "op": "forceModeOff" },
+        { "op": "dialogueOff" },
+        { "op": "forceActionOff" }
+    ]
+
+    // yay
+]

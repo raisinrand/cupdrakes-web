@@ -1,0 +1,16 @@
+[
+      // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+      [
+        { "op": "onlyForcedActions", "enabled": false }
+      ],
+
+
+      // intro flavor dialogue
+      [
+        { "op": "dialogue", "text": "One human, two humans, three humans... *yawn*", "nub": true },
+        { "op": "anyinput" }
+      ],
+      [
+        { "op": "dialogueOff" }
+      ]
+]

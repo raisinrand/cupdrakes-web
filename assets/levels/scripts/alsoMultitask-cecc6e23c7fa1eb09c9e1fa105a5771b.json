@@ -1,0 +1,16 @@
+[
+        // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+        [
+            { "op": "onlyForcedActions", "enabled": false }
+        ],
+
+
+        // intro flavor dialogue
+        [
+            { "op": "dialogue", "text": "Do not cite recipes to me! I am an Elder dragon, I was there when the ancient recipes were crafted.", "nub": true },
+            { "op": "anyinput" }
+        ],
+        [
+            { "op": "dialogueOff" }
+        ]
+]

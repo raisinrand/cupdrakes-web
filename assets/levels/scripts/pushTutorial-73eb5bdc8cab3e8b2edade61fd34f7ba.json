@@ -1,0 +1,24 @@
+[
+    // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+    [
+        { "op": "onlyForcedActions", "enabled": false }
+    ],
+
+
+    // intro flavor dialogue, let player explore rest of this level
+    [
+        { "op": "dialogue", "text": "Wohohoho my little drakelings, I now entrust this land's protection to you.", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogue", "text": "Use your newfound knowledge to banish those who have trespassed into our home.", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogue", "text": "Remember, the forest creatures will take care of enemies you knock into the woods. Remember to thank them later!", "nub": true },
+        { "op": "anyinput" }
+    ],
+    [
+        { "op": "dialogueOff"}
+    ]
+]

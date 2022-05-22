@@ -1,0 +1,20 @@
+[
+        // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+        [
+            { "op": "onlyForcedActions", "enabled": false }
+        ],
+
+
+        // intro flavor dialogue
+        [
+            { "op": "dialogue", "text": "Assassins are the fastest humans, but they can't compare to our speed!", "nub": true },
+            { "op": "anyinput" }
+        ],
+        [
+          { "op": "dialogue", "text": "Well, I guess they are better at turning.", "nub": true },
+          { "op": "anyinput" }
+        ],
+        [
+            { "op": "dialogueOff" }
+        ]
+]

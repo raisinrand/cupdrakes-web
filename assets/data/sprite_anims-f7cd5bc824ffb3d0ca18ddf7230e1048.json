@@ -1,0 +1,178 @@
+{
+    "dragonFlyLeft": {
+        "frames": [ 5,6,7,8,9 ],
+        "loop": true
+    },
+    "dragonFlyRight": {
+        "frames": [ 10,11,12,13,14 ],
+        "loop": true
+    },
+    "dragonFlyUp": {
+        "frames": [ 15,16,17,18,19 ],
+        "loop": true
+    },
+    "dragonFlyDown": {
+        "frames": [ 0,1,2,3,4 ],
+        "loop": true
+    },
+
+    "dragonSitLeft": {
+        "frames": [ 24,25,26,27 ],
+        "loop": false
+    },
+    "dragonSitRight": {
+        "frames": [ 28,29,30,31 ],
+        "loop": false
+    },
+    "dragonSitUp": {
+        "frames": [ 32,33,34,35 ],
+        "loop": false
+    },
+    "dragonSitDown": {
+        "frames": [ 20,21,22,23 ],
+        "loop": false
+    },
+
+    "dragonBlinkDown": {
+        "frames": [ 0,1,2,3 ],
+        "loop": false
+    },
+    "dragonBlinkLeft": {
+        "frames": [ 4,5,6,7 ],
+        "loop": false
+    },
+    "dragonBlinkRight": {
+        "frames": [ 8,9,10,11 ],
+        "loop": false
+    },
+    "dragonBlinkUp": {
+        "frames": [ 12,13,14,15 ],
+        "loop": false
+    },
+
+    "dragonEyesDown": {
+        "frames": [ 0 ],
+        "loop": false
+    },
+    "dragonEyesLeft": {
+        "frames": [ 4 ],
+        "loop": false
+    },
+    "dragonEyesRight": {
+        "frames": [ 8 ],
+        "loop": false
+    },
+    "dragonEyesUp": {
+        "frames": [ 12 ],
+        "loop": false
+    },
+    
+    "gruntIdleDown": {
+        "frames": [ 0 ],
+        "loop": true
+    },
+    "gruntIdleLeft": {
+        "frames": [ 1 ],
+        "loop": true
+    },
+    "gruntIdleRight": {
+        "frames": [ 2 ],
+        "loop": true
+    },
+    "gruntIdleUp": {
+        "frames": [ 3 ],
+        "loop": true
+    },
+
+    "gruntWalkDown": {
+        "frames": [ 4,5,6,7,8,9,10,11 ],
+        "loop": true
+    },
+    "gruntWalkLeft": {
+        "frames": [ 12,13,14,15,16,17,18,19 ],
+        "loop": true
+    },
+    "gruntWalkRight": {
+        "frames": [ 20,21,22,23,24,25,26,27 ],
+        "loop": true
+    },
+    "gruntWalkUp": {
+        "frames": [ 28,29,30,31,32,33,34,35 ],
+        "loop": true
+    },
+
+    "assassinWalkDown": {
+        "frames": [ 0, 1, 2, 3, 4, 5, 6, 7 ],
+        "loop": true
+    },
+    "assassinWalkLeft": {
+        "frames": [ 8, 9, 10, 11, 12, 13, 14, 15 ],
+        "loop": true
+    },
+    "assassinWalkRight": {
+        "frames": [ 16, 17, 18, 19, 20, 21, 22, 23 ],
+        "loop": true
+    },
+    "assassinWalkUp": {
+        "frames": [ 24, 25, 26, 27, 28, 29, 30, 31 ],
+        "loop": true
+    },
+    
+    "assassinIdleLeft": {
+        "frames": [ 33 ],
+        "loop": true
+    },
+    "assassinIdleRight": {
+        "frames": [ 34 ],
+        "loop": true
+    },
+    "assassinIdleUp": {
+        "frames": [ 35 ],
+        "loop": true
+    },
+    "assassinIdleDown": {
+        "frames": [ 32 ],
+        "loop": true
+    },
+    
+    "tankIdleLeft": {
+        "frames": [ 1 ],
+        "loop": true
+    },
+    "tankIdleRight": {
+        "frames": [ 2 ],
+        "loop": true
+    },
+    "tankIdleUp": {
+        "frames": [ 3 ],
+        "loop": true
+    },
+    "tankIdleDown": {
+        "frames": [ 0 ],
+        "loop": true
+    },
+    "tankWalkDown": {
+        "frames": [ 4,5,6,7,8,9,10,11 ],
+        "loop": true
+    },
+    "tankWalkLeft": {
+        "frames": [ 12,13,14,15,16,17,18,19 ],
+        "loop": true
+    },
+    "tankWalkRight": {
+        "frames": [ 20,21,22,23,24,25,26,27 ],
+        "loop": true
+    },
+    "tankWalkUp": {
+        "frames": [ 28,29,30,31,32,33,34,35 ],
+        "loop": true
+    },
+    "lava": {
+        "frames": [0, 1, 2, 3, 4, 5, 6],
+        "loop": true
+    },
+    "explosion": {
+        "frames": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+        "loop": false
+    }
+}

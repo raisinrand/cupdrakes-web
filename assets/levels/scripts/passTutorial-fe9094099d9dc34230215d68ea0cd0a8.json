@@ -1,0 +1,198 @@
+[
+  // enable 'only forced actions', requires that all actions performed by the player are those explicitly forced
+  [
+    { "op": "onlyForcedActions", "enabled": true }
+  ],
+
+
+  // intro flavor dialogue
+  [
+    { "op": "dialogue", "text": "Fine work so far, young one! Tsk, unfortunately, these ruffians just keep coming.", "nub": true },
+    { "op": "anyinput" }
+  ],
+
+  // select first dragon
+  [
+    { "op": "dialogue", "text": "Select this drakeling." },
+    { "op": "spotlight", "target": "unit", "unitId": 5 },
+    { "op": "forceSelect", "unitId": 5, "block": true }
+  ],
+  [
+    { "op": "spotlightOff" }
+  ],
+
+  // move first dragon
+  [
+    { "op": "dialogue", "text": "Now, click here to move out of harm's way." },
+    { "op": "spotlight", "target": "tile", "pos": [ 5, 4 ] },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonMove",
+        "dragonId": 5,
+        "dest": {
+          "x": 5,
+          "y": 4
+        }
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" }
+  ],
+
+  // first dragon pickup
+  [
+    { "op": "dialogue", "text": "Now, pick up an ingredient!" },
+    { "op": "spotlight", "target": "ui", "ui": "Grab" },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+        "dragonId": 5
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" }
+  ],
+
+  // select second dragon
+  [
+    { "op": "dialogue", "text": "Time to select the other drakeling." },
+    { "op": "spotlight", "target": "unit", "unitId": 1 },
+    { "op": "forceSelect", "unitId": 1, "block": true }
+  ],
+  [
+    { "op": "spotlightOff" }
+  ],
+
+  // move second dragon
+  [
+    { "op": "dialogue", "text": "Move here to avoid danger." },
+    { "op": "spotlight", "target": "tile", "pos": [ 3, 4 ] },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonMove",
+        "dragonId": 1,
+        "dest": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" }
+  ],
+
+  // second dragon pickup
+  [
+    { "op": "dialogue", "text": "Fantastic, now this drakeling can also pick up an ingredient!" },
+    { "op": "spotlight", "target": "ui", "ui": "Grab" },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+        "dragonId": 1
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" }
+  ],
+
+
+  // second dragon pass to first dragon
+  // eneter pass mode
+  [
+    { "op": "dialogue", "text": "Click here to enter pass mode." },
+    { "op": "spotlight", "target": "ui", "ui": "Pass" },
+    { "op": "forceMode", "mode": "Pass", "block": true }
+  ],
+  [
+    { "op": "spotlightOff" },
+    {"op":  "forceModeOff"}
+  ],
+  // click other dragon to pass to it
+  [
+    { "op": "dialogue", "text": "I must teach you the importance of teamwork. Click the other drakeling to pass your ingredient!" },
+    { "op": "spotlight", "target": "tile", "pos": [ 5, 4 ] },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPass",
+        "dragonId": 1,
+        "dir": "Right"
+      },
+      "block": true
+    }
+  ],
+
+
+  // inbetween learning pass and infinite resources dialogue
+  [
+    { "op": "dialogue", "text": "Since your hands are free, you can pick up another ingredient." },
+    { "op": "spotlight", "target": "ui", "ui": "Grab" },
+    {
+      "op": "forceAction",
+      "action": {
+        "class": "edu.cornell.gdiac.cupdrakes.game.actions.dragon.DragonPickup",
+        "dragonId": 1
+      },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" }
+  ],
+
+  // end turn
+  [
+    { "op": "dialogue", "text": "To move again, end your turn." },
+    { "op": "spotlight", "target": "ui", "ui": "EndTurn" },
+    {
+      "op": "forceAction",
+      "action": { "class": "edu.cornell.gdiac.cupdrakes.game.actions.EndTurn" },
+      "block": true
+    }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceActionOff" },
+    { "op": "forceSelectOff" }
+  ],
+
+  // flavor dialogue before leaving player off on their own
+  [
+    { "op": "dialogue", "text": "You are too young to fly over these half walls, but you can use teamwork to pass ingredients.", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "dialogue", "text": "Remember, you can push enemies into each other or off the map to defeat them!", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "dialogue", "text": "Hohohoho, now show them how it's done!", "nub": true },
+    { "op": "anyinput" }
+  ],
+  [
+    { "op": "spotlightOff" },
+    { "op": "forceModeOff" },
+    { "op": "dialogueOff" },
+    { "op": "forceActionOff" }
+  ],
+  [
+    { "op": "onlyForcedActions", "enabled": false }
+  ]
+]
